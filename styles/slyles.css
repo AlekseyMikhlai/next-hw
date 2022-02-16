@@ -1,0 +1,335 @@
+.body-norepbgi {
+  display: block;
+  justify-content: center;
+  background: url(../img/bgpicture/hbg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100vw;
+}
+.bodypicture {
+  display: block;
+  justify-content: center;
+  background: url(../img/bgpicture/hbg.jpg);
+  background-repeat: repeat-y;
+  background-size: 100%;
+  width: 100vw;
+}
+.gallerybody {
+  background-image: url(../img/gallery/bgi.jpg);
+  background-repeat: repeat;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 20px 0;
+  overflow: auto;
+}
+.catalogpieces {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin: auto;
+}
+.newpositionname::after {
+  content: "new!!!";
+  background-color: red;
+  margin-left: 5px;
+}
+.contactpagecontainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: azure;
+  opacity: 0.9;
+}
+.artpagecontainer {
+  text-align: justify;
+  padding: 0 20px;
+  background-color: azure;
+  opacity: 0.9;
+}
+.section {
+  width: 33%;
+  justify-content: space-around;
+  font-size: 2em;
+  padding: 10px;
+  background-color: azure;
+  opacity: 0.8;
+}
+
+.header-navbar {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  width: 100%;
+  height: 100px;
+  background-color: azure;
+  opacity: 0.6;
+  margin-left: -10px;
+}
+.navli {
+  display: inline;
+  list-style: none;
+  padding: 0 40px;
+  font-size: 2em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.navli-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  margin: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 2rem;
+  font-style: italic;
+  color: red;
+  background-image: url(../img/bgpicture/libg.jpg);
+  background-size: 100%;
+  width: 40%;
+  height: 150px;
+  list-style: none;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 20px;
+}
+a {
+  text-decoration: none;
+}
+.hpagelink {
+  color: bisque;
+}
+.artpagelink {
+  color: hsla(19, 85%, 13%, 0.979);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: large;
+  border-bottom: 5px solid red;
+}
+.arttitle {
+}
+.image {
+  max-width: 1240px;
+}
+.firstletter::first-letter {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2em;
+  color: red;
+}
+.readforward:hover {
+  color: red;
+}
+.gotocomment {
+  color: grey;
+}
+.article-text {
+  background-color: wheat;
+}
+.headpage-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.5em;
+  width: 100%;
+  max-height: 100px;
+  background-color: azure;
+  opacity: 0.6;
+  margin: 0 auto;
+  margin: 0 0 -50px -10px;
+}
+.galery-footer {
+  position: absolute;
+  bottom: 0;
+}
+.hpage-footer {
+  position: absolute;
+  bottom: 0;
+}
+.contactsbackinfo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 50px;
+}
+.contacts-biplace {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 500px;
+  margin: 5px auto;
+  padding: 10px;
+  background-color: bisque;
+  margin: 5px;
+}
+.contacts-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.contacts-info-paragraphs {
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 2em;
+  color: rgb(34, 18, 18);
+  margin: 0 auto;
+}
+.contacts-map {
+  text-align: center;
+  font-size: 2em;
+}
+.sectionbackinfo {
+  width: 100%;
+  height: auto;
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+label.ligh-form {
+  display: block;
+  margin: 5px auto;
+}
+input.ligh-form,
+textarea {
+  display: block;
+  width: 100%;
+  margin: 5px auto;
+}
+.registrinfopieces {
+  max-width: 500px;
+  margin: 5px auto;
+  padding: 10px;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+}
+#sendbtn {
+  width: 60%;
+  margin: 5px auto;
+}
+#destroybtn {
+  width: 60%;
+  margin: 5px auto;
+}
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: bisque;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  font-size: 1.1rem;
+  background-color: azure;
+  opacity: 0.9;
+}
+.imglink {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+}
+
+.galery-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px;
+}
+.figcomponent {
+  box-sizing: border-box;
+  outline: 3px solid greenyellow;
+}
+.figcomponent:hover {
+  box-sizing: border-box;
+  outline-style: none;
+}
+.page-nav-list {
+  background-color: azure;
+  width: 100%;
+  opacity: 0.9;
+}
+.page-nav-content {
+  text-align: justify;
+  background-color: azure;
+  opacity: 0.9;
+  padding: 0 20px;
+}
+.personinfo {
+  display: inline;
+}
+.kitcheninfosection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.kitchen-list-title {
+  width: 90%;
+  text-align: center;
+}
+.kitchen-list {
+  display: flex;
+  align-content: center;
+  padding-left: 50px;
+}
+.kitchen-list {
+  display: inline;
+  width: 100%;
+  margin: 5px auto;
+}
+.registrinfoparagraph {
+  text-align: center;
+  width: 90%;
+}
+.registrinfogen {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 500px;
+  margin: 5px auto;
+  background-color: bisque;
+  align-items: center;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+.kitcheninfo {
+  display: inline;
+  list-style: none;
+}
+.list-img::marker {
+  content: "f/13s";
+  width: 20px;
+  height: 20px;
+}
