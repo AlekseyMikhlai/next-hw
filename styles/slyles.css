@@ -1,86 +1,48 @@
-.body-norepbgi {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
   display: block;
   justify-content: center;
   background: url(../img/bgpicture/hbg.jpg);
-  background-repeat: no-repeat;
   background-size: 100%;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
+}
+.body-norepbgi {
+  background-repeat: no-repeat;
 }
 .bodypicture {
-  display: block;
-  justify-content: center;
-  background: url(../img/bgpicture/hbg.jpg);
   background-repeat: repeat-y;
-  background-size: 100%;
-  width: 100vw;
 }
 .gallerybody {
   background-image: url(../img/gallery/bgi.jpg);
+  background-size: 25% 25%;
   background-repeat: repeat;
 }
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 1280px;
-  margin: auto;
-  padding: 20px 0;
-  overflow: auto;
-}
-.catalogpieces {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  margin: auto;
-}
-.newpositionname::after {
-  content: "new!!!";
-  background-color: red;
-  margin-left: 5px;
-}
-.contactpagecontainer {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  background-color: azure;
-  opacity: 0.9;
-}
-.artpagecontainer {
-  text-align: justify;
-  padding: 0 20px;
-  background-color: azure;
-  opacity: 0.9;
-}
-.section {
-  width: 33%;
-  justify-content: space-around;
-  font-size: 2em;
-  padding: 10px;
-  background-color: azure;
-  opacity: 0.8;
-}
-
 .header-navbar {
   display: flex;
   justify-content: center;
   justify-content: space-around;
   align-items: center;
   align-content: space-around;
+  flex-wrap: wrap;
   width: 100%;
+  max-width: 1280px;
   height: 100px;
+  margin: 0 auto;
+  padding: 20px 0;
   background-color: azure;
   opacity: 0.6;
-  margin-left: -10px;
 }
 .navli {
   display: inline;
   list-style: none;
   padding: 0 40px;
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 .navli-item {
@@ -93,24 +55,75 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 2rem;
   font-style: italic;
-  color: red;
   background-image: url(../img/bgpicture/libg.jpg);
   background-size: 100%;
   width: 40%;
   height: 150px;
   list-style: none;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  padding: 20px 0;
+}
+.contactpagecontainer,
+.artpagecontainer,
+.page-nav-container,
+.registr-container {
+  text-align: justify;
+  padding-bottom: 50px;
+  background-color: azure;
+  opacity: 0.9;
+}
+.contactpagecontainer,
+.registr-container {
+  align-items: center;
+}
+.catalogpieces {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 85%;
+  margin: 30px auto;
+}
+.section {
+  width: 30%;
+  justify-content: space-around;
+  font-size: 1.5em;
+  padding: 10px;
+  background-color: azure;
+  opacity: 0.8;
+}
+.newpositionname::after {
+  content: "new!!!";
+  background-color: red;
+  margin-left: 5px;
+}
+.hpagelink {
+  color: bisque;
+}
 h1 {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 20px;
+  height: 40px;
+  font-size: 3rem;
+  margin: 10px auto;
+}
+h4 {
+  text-align: center;
+  font-size: large;
+  padding: 20px 0;
+  height: 30px;
 }
 a {
   text-decoration: none;
-}
-.hpagelink {
-  color: bisque;
 }
 .artpagelink {
   color: hsla(19, 85%, 13%, 0.979);
@@ -119,7 +132,11 @@ a {
   font-size: large;
   border-bottom: 5px solid red;
 }
-.arttitle {
+article p,
+h2 {
+  padding: 0 10px 0;
+  margin: 5px auto;
+  text-align: justify;
 }
 .image {
   max-width: 1240px;
@@ -151,17 +168,23 @@ footer {
   align-items: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.5em;
+  max-width: 1280px;
   width: 100%;
   max-height: 100px;
+  padding: 10px 0;
+  margin: 0 auto;
   background-color: azure;
   opacity: 0.6;
-  margin: 0 auto;
-  margin: 0 0 -50px -10px;
 }
-.hpage-footer {
-  position: absolute;
+footer {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
   bottom: 0;
 }
+/*.hpage-footer {
+}*/
 .contactsbackinfo {
   display: flex;
   flex-direction: column;
@@ -227,11 +250,8 @@ textarea {
   justify-content: center;
   margin: 5px;
 }
-#sendbtn {
-  width: 60%;
-  margin: 5px auto;
-}
-#destroybtn {
+.sendbtn,
+.destroybtn {
   width: 60%;
   margin: 5px auto;
 }
@@ -253,7 +273,7 @@ figure {
   margin: 20px auto;
 }
 
-.galery-container {
+.gallery-container {
   display: flex;
   justify-content: space-around;
   margin: 50px;
@@ -289,10 +309,12 @@ figure {
   width: 90%;
   text-align: center;
 }
-.kitchen-list {
+.kitchen-list,
+.form-group {
   display: flex;
   align-content: center;
   padding-left: 50px;
+  margin: 10px 0 5px;
 }
 .kitchen-list {
   display: inline;
@@ -312,13 +334,6 @@ figure {
   margin: 5px auto;
   background-color: bisque;
   align-items: center;
-}
-.form-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 10px;
 }
 .kitcheninfo {
   display: inline;

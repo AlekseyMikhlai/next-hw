@@ -20,10 +20,10 @@
             <li class="navli"><a href="page-nav.html">Навигация</a></li>
         </ul>
     </header>
-    <main class="container">
+    <main class="container registr-container">
         <h1>Регистрация:</h1>
         <form class="registrinfo" action="#" method="get" enctype="multipart/form-data">
-            <div class="registrinfopieces">
+            <fieldset class="registrinfopieces">
                 <label class="ligh-form" for="username">Введите Ваше имя:</label>
                 <input class="ligh-form" id="username" type="text" name="username" placeholder="Фамилия Имя Отчество">
                 <label class="ligh-form" for="userfoto">Ваше фото</label>
@@ -34,44 +34,49 @@
                 <input class="ligh-form" id="catchword" type="password" name="password" placeholder="Введите пароль">
                 <label class="ligh-form" for="webpage">Введите название сайта:</label>
                 <input class="ligh-form" id="webpage" type="text" name="webpage" placeholder="Введите название сайта">
-            </div>
-            <div class="registrinfopieces">
-                <p class="registrinfoparagraph">Ваш пол:</p>
-                <div class="form-group">
-                    <input checked id="genmale" type="radio" name="gender" value="male"><label
-                        for="genmale">Мужской</label>
                 </div>
-                <div class="form-group">
-                    <input id="genfemale" type="radio" name="gender" value="women"> <label
-                        for="genfemale">Женский</label>
+                <div class="registrinfopieces">
+                    <p class="registrinfoparagraph">Ваш пол:</p>
+                    <div class="form-group">
+                        <input checked id="genmale" type="radio" name="gender" value="male"><label
+                            for="genmale">Мужской</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="genfemale" type="radio" name="gender" value="women"> <label
+                            for="genfemale">Женский</label>
+                    </div>
                 </div>
-            </div>
-            <div class="registrinfopieces">
-                <p class="kitchen-list-title">Выберите кухню:</p>
-                <div class="kitchen-list">
-                    <input type="checkbox" id="check1" name="kitchen"><label for="check1">Белорусская</label>
+                <div class="registrinfopieces">
+                    <p class="kitchen-list-title">Выберите кухню:</p>
+                    <div class="kitchen-list">
+                        <input type="checkbox" id="check1" name="kitchen">
+                        <label for="check1">Белорусская</label>
+                    </div>
+                    <div class="kitchen-list">
+                        <input type="checkbox" id="check2" name="kitchen2">
+                        <label for="check2">Итальянская</label>
+                    </div>
+                    <div class="kitchen-list">
+                        <input type="checkbox" id="check3" name="kitchen3">
+                        <label for="check3">Испанская</label>
+                    </div>
+                    <div class="kitchen-list">
+                        <input type="checkbox" id="check4" name="kitchen3">
+                        <label for="check4">Французская</label>
+                    </div>
+                    <div class="kitchen-list">
+                        <input type="checkbox" id="check5" name="kitchen3">
+                        <label for="check5">Грузинская</label>
+                    </div>
                 </div>
-                <div class="kitchen-list">
-                    <input type="checkbox" id="check2" name="kitchen2"><label for="check2">Итальянская</label>
-                </div>
-                <div class="kitchen-list">
-                    <input type="checkbox" id="check3" name="kitchen3"><label for="check3">Испанская</label>
-                </div>
-                <div class="kitchen-list">
-                    <input type="checkbox" id="check4" name="kitchen3"><label for="check4">Французская</label>
-                </div>
-                <div class="kitchen-list">
-                    <input type="checkbox" id="check5" name="kitchen3"><label for="check5">Грузинская</label>
-                </div>
-            </div>
-            <div class="registrinfopieces">
-                <label class="ligh-form" for="yourself">Напишите о себе:</label>
-                <textarea id="yourself" name="yourabout" cols="30" rows="10"></textarea>
-                <label class="ligh-form" for="birthday">Дата Вашего рождения:</label>
-                <input class="ligh-form" id="birthday" type="date" name="birthday">
-                <button id="sendbtn" type="submit">Зарегистрироваться</button>
-                <button id="destroybtn" type="reset">Очистить форму</button>
-            </div>
+                <div class="registrinfopieces">
+                    <label class="ligh-form" for="yourself">Напишите о себе:</label>
+                    <textarea id="yourself" name="yourabout" cols="30" rows="10"></textarea>
+                    <label class="ligh-form" for="birthday">Дата Вашего рождения:</label>
+                    <input class="ligh-form" id="birthday" type="date" name="birthday">
+                    <button class="sendbtn" type="submit">Зарегистрироваться</button>
+                    <button class="destroybtn" type="reset">Очистить форму</button>
+            </fieldset>
         </form>
     </main>
     <footer class="footer">
