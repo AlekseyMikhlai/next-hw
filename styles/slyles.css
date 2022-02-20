@@ -4,47 +4,36 @@
   box-sizing: border-box;
   margin: 0;
 }
+html,
+body {
+  height: 100%;
+}
 body {
   display: block;
   justify-content: center;
   background: url(../img/bgpicture/hbg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: 100%;
   width: 100%;
-  height: 100%;
-}
-.body-norepbgi {
-  background-repeat: no-repeat;
-}
-.bodypicture {
-  background-repeat: repeat-y;
 }
 .gallerybody {
   background-image: url(../img/gallery/bgi.jpg);
-  background-size: 25% 25%;
+  background-size: 50% 50%;
   background-repeat: repeat;
 }
-.header-navbar {
-  display: flex;
-  justify-content: center;
-  justify-content: space-around;
-  align-items: center;
-  align-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 1280px;
-  height: 100px;
-  margin: 0 auto;
-  padding: 20px 0;
-  background-color: azure;
-  opacity: 0.6;
-}
-.navli {
+.navli,
+.artnavli {
   display: inline;
   list-style: none;
   padding: 0 40px;
   font-size: 1.5em;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
+.artnavli {
+  font-size: 1.4em;
+}
+
 .navli-item {
   display: flex;
   flex-direction: row;
@@ -61,7 +50,9 @@ body {
   height: 150px;
   list-style: none;
 }
-.container {
+.header-navbar,
+.container,
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,16 +60,44 @@ body {
   max-width: 1280px;
   width: 100%;
   margin: auto;
-  padding: 20px 0;
+  padding: 20px 5px;
+}
+.header-navbar {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  height: 100px;
+  margin: 0 auto;
+  background-color: azure;
+  opacity: 0.6;
+}
+footer {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.5em;
+  max-height: 100px;
+  padding: 10px 5px;
+  margin: 0 auto;
+  background-color: azure;
+  opacity: 0.6;
 }
 .contactpagecontainer,
 .artpagecontainer,
 .page-nav-container,
 .registr-container {
-  text-align: justify;
   padding-bottom: 50px;
   background-color: azure;
   opacity: 0.9;
+}
+.artpagecontainer,
+.page-nav-container {
+  text-align: justify;
 }
 .contactpagecontainer,
 .registr-container {
@@ -100,10 +119,17 @@ body {
   background-color: azure;
   opacity: 0.8;
 }
+.positionname {
+  padding: 10px;
+}
 .newpositionname::after {
+  display: flex;
+  flex-wrap: wrap;
   content: "new!!!";
+  width: 70px;
   background-color: red;
-  margin-left: 5px;
+  padding: 5px 5px;
+  margin: 0 5px;
 }
 .hpagelink {
   color: bisque;
@@ -111,15 +137,22 @@ body {
 h1 {
   display: flex;
   justify-content: center;
+  align-content: center;
   width: 100%;
-  height: 40px;
   font-size: 3rem;
   margin: 10px auto;
 }
+article p,
+h2 {
+  padding: 5px 10px;
+  margin: 5px auto;
+  text-align: justify;
+}
+h3,
 h4 {
   text-align: center;
   font-size: large;
-  padding: 20px 0;
+  padding: 20px 5px;
   height: 30px;
 }
 a {
@@ -132,19 +165,18 @@ a {
   font-size: large;
   border-bottom: 5px solid red;
 }
-article p,
-h2 {
-  padding: 0 10px 0;
-  margin: 5px auto;
-  text-align: justify;
-}
 .image {
+  display: flex;
+  justify-content: center;
   max-width: 1240px;
 }
 .firstletter::first-letter {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2em;
   color: red;
+}
+.firstletter {
+  padding: 20px 15px;
 }
 .readforward:hover {
   color: red;
@@ -154,6 +186,7 @@ h2 {
 }
 .article-text {
   background-color: wheat;
+  padding: 5px 10px 5px;
 }
 .headpage-list {
   display: flex;
@@ -162,29 +195,6 @@ h2 {
   justify-content: space-around;
   align-items: center;
 }
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 1.5em;
-  max-width: 1280px;
-  width: 100%;
-  max-height: 100px;
-  padding: 10px 0;
-  margin: 0 auto;
-  background-color: azure;
-  opacity: 0.6;
-}
-footer {
-  position: fixed;
-  z-index: 10;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-/*.hpage-footer {
-}*/
 .contactsbackinfo {
   display: flex;
   flex-direction: column;
@@ -192,16 +202,20 @@ footer {
   justify-content: center;
   height: 50px;
 }
-.contacts-biplace {
+.contacts-biplace,
+.contacts-map,
+.contacts-info {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
   max-width: 500px;
+  width: 100%;
   margin: 5px auto;
-  padding: 10px;
-  background-color: bisque;
-  margin: 5px;
+  padding: 10px 5px;
+}
+.contacts-item {
+  display: flex;
+  justify-content: space-between;
 }
 .contacts-info {
   display: flex;
@@ -228,16 +242,6 @@ footer {
   max-width: 1280px;
   margin: 0 auto;
   overflow-y: auto;
-}
-label.ligh-form {
-  display: block;
-  margin: 5px auto;
-}
-input.ligh-form,
-textarea {
-  display: block;
-  width: 100%;
-  margin: 5px auto;
 }
 .registrinfopieces {
   max-width: 500px;
@@ -278,9 +282,16 @@ figure {
   justify-content: space-around;
   margin: 50px;
 }
+.gallery-main-container {
+  align-content: flex-start;
+  background-color: azure;
+  height: 81%;
+  opacity: 0.9;
+}
 .figcomponent {
   box-sizing: border-box;
-  outline: 3px solid greenyellow;
+  outline: 3px solid green;
+  background-color: lightgrey;
 }
 .figcomponent:hover {
   box-sizing: border-box;
@@ -291,11 +302,12 @@ figure {
   width: 100%;
   opacity: 0.9;
 }
-.page-nav-content {
+.page-nav-content,
+.page-nav-article {
   text-align: justify;
   background-color: azure;
   opacity: 0.9;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 .personinfo {
   display: inline;
@@ -313,34 +325,53 @@ figure {
 .form-group {
   display: flex;
   align-content: center;
-  padding-left: 50px;
+  padding: 10px;
   margin: 10px 0 5px;
-}
-.kitchen-list {
-  display: inline;
-  width: 100%;
-  margin: 5px auto;
 }
 .registrinfoparagraph {
   text-align: center;
   width: 90%;
 }
-.registrinfogen {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 500px;
-  margin: 5px auto;
-  background-color: bisque;
-  align-items: center;
-}
 .kitcheninfo {
   display: inline;
   list-style: none;
 }
-.list-img::marker {
-  content: "f/13s";
-  width: 20px;
-  height: 20px;
+.list-img li {
+  padding: 10px;
+  margin: 10px auto;
+}
+fieldset {
+  max-width: 500px;
+  margin: 25px auto;
+  background-color: bisque;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+input {
+  display: block;
+  padding: 10px;
+  border: 2px solid grey;
+  border-image: initial;
+  margin: 5px 10px;
+}
+.ligh-form {
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: auto 10px;
+  text-align: start;
+}
+.registr-form-info,
+.contacts-form-info {
+  width: 100%;
+}
+.contacts-btn {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
 }
