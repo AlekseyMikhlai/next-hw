@@ -9,7 +9,6 @@ body {
   height: 100%;
 }
 body {
-  display: block;
   justify-content: center;
   background: url(../img/bgpicture/hbg.jpg);
   background-repeat: no-repeat;
@@ -33,7 +32,6 @@ body {
 .artnavli {
   font-size: 1.4em;
 }
-
 .navli-item {
   display: flex;
   flex-direction: row;
@@ -54,12 +52,14 @@ body {
 .container,
 footer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   flex-wrap: wrap;
   max-width: 1280px;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
+}
+.footer,
+.container {
+  justify-content: center;
   padding: 20px 5px;
 }
 .header-navbar {
@@ -68,7 +68,6 @@ footer {
   align-items: center;
   align-content: space-around;
   height: 100px;
-  margin: 0 auto;
   background-color: azure;
   opacity: 0.6;
 }
@@ -78,12 +77,9 @@ footer {
   right: 0;
   left: 0;
   bottom: 0;
-  align-items: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.5em;
   max-height: 100px;
-  padding: 10px 5px;
-  margin: 0 auto;
   background-color: azure;
   opacity: 0.6;
 }
@@ -95,8 +91,11 @@ footer {
   background-color: azure;
   opacity: 0.9;
 }
-.artpagecontainer,
-.page-nav-container {
+.gallery-main-container,
+.contactpagecontainer {
+  flex-direction: column;
+}
+.artpagecontainer {
   text-align: justify;
 }
 .contactpagecontainer,
@@ -122,14 +121,18 @@ footer {
 .positionname {
   padding: 10px;
 }
+.list-img li {
+  padding: 2px 10px 5px 2px;
+}
+.list-img {
+  padding: 0 5px 5px 20px;
+}
 .newpositionname::after {
-  display: flex;
-  flex-wrap: wrap;
+  display: inline-block;
   content: "new!!!";
-  width: 70px;
   background-color: red;
-  padding: 5px 5px;
-  margin: 0 5px;
+  padding: 1px 1px;
+  margin: 5px;
 }
 .hpagelink {
   color: bisque;
@@ -142,14 +145,16 @@ h1 {
   font-size: 3rem;
   margin: 10px auto;
 }
-article p,
-h2 {
-  padding: 5px 10px;
-  margin: 5px auto;
+article p {
   text-align: justify;
 }
+h2 {
+  margin: 5px 10px;
+  padding: 5px 10px;
+}
 h3,
-h4 {
+h4,
+h5 {
   text-align: center;
   font-size: large;
   padding: 20px 5px;
@@ -163,6 +168,7 @@ a {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   font-size: large;
+  padding: 5px;
   border-bottom: 5px solid red;
 }
 .image {
@@ -218,23 +224,16 @@ a {
   justify-content: space-between;
 }
 .contacts-info {
-  display: flex;
   justify-content: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
 }
-.contacts-info-paragraphs {
-  text-align: center;
-  margin: 0 auto;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 2em;
-  color: rgb(34, 18, 18);
-  margin: 0 auto;
-}
+.contacts-info-paragraphs,
 .contacts-map {
   text-align: center;
   font-size: 2em;
+  color: rgb(34, 18, 18);
+}
+.contacts-info-paragraphs {
+  transform: translateY(-20px);
 }
 .sectionbackinfo {
   width: 100%;
@@ -297,13 +296,22 @@ figure {
   box-sizing: border-box;
   outline-style: none;
 }
+figcaption {
+  color: black;
+}
 .page-nav-list {
+  margin-left: 20px;
   background-color: azure;
   width: 100%;
-  opacity: 0.9;
+}
+#sec1,
+#sec2,
+#sec3 {
+  text-align: center;
 }
 .page-nav-content,
-.page-nav-article {
+.page-nav-article,
+.page-nav-articlespec {
   text-align: justify;
   background-color: azure;
   opacity: 0.9;
@@ -321,57 +329,44 @@ figure {
   width: 90%;
   text-align: center;
 }
-.kitchen-list,
-.form-group {
-  display: flex;
-  align-content: center;
-  padding: 10px;
-  margin: 10px 0 5px;
-}
 .registrinfoparagraph {
   text-align: center;
   width: 90%;
-}
-.kitcheninfo {
-  display: inline;
-  list-style: none;
-}
-.list-img li {
-  padding: 10px;
-  margin: 10px auto;
 }
 fieldset {
   max-width: 500px;
   margin: 25px auto;
   background-color: bisque;
-  font-size: 1.5em;
-  font-weight: 300;
 }
+select,
 input {
-  display: block;
-  padding: 10px;
-  border: 2px solid grey;
-  border-image: initial;
-  margin: 5px 10px;
-}
-.ligh-form {
-  padding: 10px;
   width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding: 10px 20px;
+}
+input[type="file"] {
+  padding: 0;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
 }
 textarea {
   width: 100%;
-  padding: 10px;
-  margin: auto 10px;
-  text-align: start;
+  padding: 10px 20px;
+  resize: vertical;
+  min-height: 75px;
+  max-height: 33vh;
 }
-.registr-form-info,
-.contacts-form-info {
+legend {
+  transform: translateY(-10px);
+}
+.form-group:not(:first-of-type) {
+  margin: 15px 0 5px;
+}
+.form-group-sm {
+  margin: 10px 0 5px;
+}
+.btn {
   width: 100%;
-}
-.contacts-btn {
-  display: flex;
-  flex-direction: column;
-  margin: 10px auto;
+  padding: 10px 20px;
 }

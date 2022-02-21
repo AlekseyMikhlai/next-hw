@@ -22,82 +22,112 @@
     </header>
     <main class="container registr-container">
         <h1>Регистрация:</h1>
-        <form class="registrinfo" action="#" method="get" enctype="multipart/form-data">
+        <form action="#" method="get" enctype="multipart/form-data">
             <fieldset>
                 <legend>#1 Базовые поля</legend>
-                <div class="ligh-form">
-                    <label for="username">Введите Ваше имя:</label>
-                    <input class="registr-form-info" id="username" type="text" name="username"
-                        placeholder="Фамилия Имя Отчество">
+                <div class="form-group">
+                    <label>Логин:
+                        <input type="text" name="username" placeholder="Логин" minlength="3" maxlength="10"
+                            value="Alexei"></label>
                 </div>
-                <div class="ligh-form"><label for="birthday">Дата Вашего рождения:</label>
-                    <input class="registr-form-info" class="registr-form-info id=" birthday" type="date"
-                        name="birthday">
-                </div>
-                <div class="ligh-form">
-                    <label for="userfoto">Ваше фото</label>
-                    <input class="registr-form-info" id="userfoto" type="file" name="foto">
-                </div>
-                <div class="ligh-form">
-                    <label for="useremail">Ваша электронная почта:</label>
-                    <input class="registr-form-info" id="useremail" type="email" name="useremail" placeholder="email">
-                </div>
-                <div class="ligh-form">
-                    <label for="catchword">Пароль:
-                        <input class="registr-form-info" id="catchword" type="password" name="password"
+                <div class="form-group">
+                    <label>Пароль:
+                        <input type="password" name="password" minlength="3" maxlength="10"
                             placeholder="Введите пароль"></label>
                 </div>
-                <div class="ligh-form">
-                    <label for="webpage">Введите название сайта:</label>
-                    <input class="registr-form-info" id="webpage" type="text" name="webpage"
-                        placeholder="Введите название сайта">
+                <div class="form-group"><label>Дата Вашего рождения:
+                        <input type="date" name="birthday"></label>
+                </div>
+                <div class="form-group">
+                    <label>Ваше фото
+                        <input type="file" name="foto"></label>
+                </div>
+                <div class="form-group">
+                    <label>Ваша электронная почта:
+                        <input type="email" name="useremail" placeholder="Имейл"></label>
+                </div>
+                <div class="form-group">
+                    <label>Введите название сайта:
+                        <input type="text" name="webpage" placeholder="Введите название сайта"></label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>#4 Открывающийся список</legend>
+                <div class="form-group">
+                    <label for="birthyear">Год вашего рождения</label>
+                    <select name="sel" id="birthyear" multiple size="14">
+                        <option selected disabled value="">Выберите год</option>
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                        <option value="2008">2008</option>
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                    </select>
                 </div>
             </fieldset>
             <fieldset>
                 <legend>#2 Выбор пола</legend>
-                <div class="form-group">
-                    <input checked id="genmale" type="radio" name="gender" value="male"><label
+                <div class="form-group-sm">
+                    <input checked type="radio" id="genmale" name="gender" value="male"><label
                         for="genmale">Мужской</label>
                 </div>
-                <div class="form-group">
-                    <input id="genfemale" type="radio" name="gender" value="women"><label
+                <div class="form-group-sm">
+                    <input type="radio" id="genfemale" name="gender" value="female"><label
                         for="genfemale">Женский</label>
                 </div>
             </fieldset>
             <fieldset>
                 <legend>#3 Выберите предрочитаемую кухню</legend>
-                <div class="kitchen-list">
-                    <input type="checkbox" id="check1" name="kitchen">
-                    <label for="check1">Белорусская</label>
+                <div class="form-group-sm">
+                    <input type="checkbox" id="by" name="kit" value="by">
+                    <label for="by">Белорусская</label>
                 </div>
-                <div class="kitchen-list">
-                    <input type="checkbox" id="check2" name="kitchen2">
-                    <label for="check2">Итальянская</label>
+                <div class="form-group-sm">
+                    <input type="checkbox" id="it" name="kit" value="it">
+                    <label for="it">Итальянская</label>
                 </div>
-                <div class="kitchen-list">
-                    <input type="checkbox" id="check3" name="kitchen3">
-                    <label for="check3">Испанская</label>
+                <div class="form-group-sm">
+                    <input type="checkbox" id="es" name="kit" value="es">
+                    <label for="es">Испанская</label>
                 </div>
-                <div class="kitchen-list">
-                    <input type="checkbox" id="check4" name="kitchen3">
-                    <label for="check4">Французская</label>
+                <div class="form-group-sm">
+                    <input type="checkbox" id="fr" name="kit" value="fr">
+                    <label for="fr">Французская</label>
                 </div>
-                <div class="kitchen-list">
-                    <input type="checkbox" id="check5" name="kitchen3">
-                    <label for="check5">Грузинская</label>
+                <div class="form-group-sm">
+                    <input type="checkbox" id="gr" name="kit" value="gr">
+                    <label for="gr">Грузинская</label>
                 </div>
             </fieldset>
             <fieldset>
                 <legend>#4 О себе в произвольной форме</legend>
                 <div class="form-group">
-                    <label>Напишите о себе:
-                        <textarea id="yourself" name="yourabout" cols="30" rows="10"></textarea></label>
+                    <label for="yourself">Напишите о себе:</label>
+                    <textarea name="yourabout" id="yourself" cols="30" rows="10"
+                        placeholder="Расскажите о себе..."></textarea>
                 </div>
             </fieldset>
             <fieldset>
                 <legend>#5 Кнопки управления формой</legend>
-                <div class="form-group"><button class="sendbtn" type="submit">Зарегистрироваться</button></div>
-                <div class="form-group"><button class="destroybtn" type="reset">Очистить форму</button></div>
+                <div class="form-group">
+                    <input class="btn" type="submit" value="Отправить">
+                </div>
+                <div class="form-group">
+                    <input class="btn" type="reset" value="Очистить форму">
+                </div>
             </fieldset>
         </form>
     </main>
