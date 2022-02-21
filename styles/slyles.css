@@ -18,7 +18,7 @@ body {
 }
 .gallerybody {
   background-image: url(../img/gallery/bgi.jpg);
-  background-size: 50% 50%;
+  background-size: 25% 25%;
   background-repeat: repeat;
 }
 .navli,
@@ -26,24 +26,29 @@ body {
   display: inline;
   list-style: none;
   padding: 0 40px;
-  font-size: 1.5em;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 .artnavli {
   font-size: 1.4em;
 }
+.navli {
+  font-size: 1.5em;
+}
+.headpage-list,
 .navli-item {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: center;
   justify-content: space-around;
-  margin: 10px;
+  align-items: center;
+}
+.navli-item {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 2rem;
   font-style: italic;
   background-image: url(../img/bgpicture/libg.jpg);
   background-size: 100%;
+  margin: 10px;
   width: 40%;
   height: 150px;
   list-style: none;
@@ -104,15 +109,13 @@ footer {
 }
 .catalogpieces {
   display: flex;
-  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
   width: 85%;
-  margin: 30px auto;
+  margin: 10px auto 70px;
 }
 .section {
   width: 30%;
-  justify-content: space-around;
   font-size: 1.5em;
   padding: 10px;
   background-color: azure;
@@ -138,9 +141,7 @@ footer {
   color: bisque;
 }
 h1 {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  text-align: center;
   width: 100%;
   font-size: 3rem;
   margin: 10px auto;
@@ -194,21 +195,6 @@ a {
   background-color: wheat;
   padding: 5px 10px 5px;
 }
-.headpage-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-.contactsbackinfo {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 50px;
-}
-.contacts-biplace,
 .contacts-map,
 .contacts-info {
   display: flex;
@@ -219,56 +205,31 @@ a {
   margin: 5px auto;
   padding: 10px 5px;
 }
-.contacts-item {
-  display: flex;
-  justify-content: space-between;
-}
 .contacts-info {
   justify-content: center;
 }
-.contacts-info-paragraphs,
+.contacts-info p,
 .contacts-map {
   text-align: center;
   font-size: 2em;
   color: rgb(34, 18, 18);
 }
-.contacts-info-paragraphs {
-  transform: translateY(-20px);
-}
-.sectionbackinfo {
-  width: 100%;
-  height: auto;
-  max-width: 1280px;
-  margin: 0 auto;
-  overflow-y: auto;
-}
-.registrinfopieces {
-  max-width: 500px;
-  margin: 5px auto;
-  padding: 10px;
-  background-color: bisque;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 5px;
-}
-.sendbtn,
-.destroybtn {
-  width: 60%;
-  margin: 5px auto;
-}
 figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: bisque;
   width: 250px;
   height: 250px;
   text-align: center;
   font-size: 1.1rem;
-  background-color: azure;
   opacity: 0.9;
+}
+.figcomponent {
+  outline: 3px solid green;
+  background-color: lightgrey;
+}
+.figcomponent:hover {
+  outline-style: none;
+}
+figcaption {
+  color: black;
 }
 .imglink {
   width: 150px;
@@ -284,20 +245,8 @@ figure {
 .gallery-main-container {
   align-content: flex-start;
   background-color: azure;
-  height: 81%;
+  height: 78%;
   opacity: 0.9;
-}
-.figcomponent {
-  box-sizing: border-box;
-  outline: 3px solid green;
-  background-color: lightgrey;
-}
-.figcomponent:hover {
-  box-sizing: border-box;
-  outline-style: none;
-}
-figcaption {
-  color: black;
 }
 .page-nav-list {
   margin-left: 20px;
@@ -320,15 +269,7 @@ figcaption {
 .personinfo {
   display: inline;
 }
-.kitcheninfosection {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-.kitchen-list-title {
-  width: 90%;
-  text-align: center;
-}
+
 .registrinfoparagraph {
   text-align: center;
   width: 90%;
@@ -339,12 +280,10 @@ fieldset {
   background-color: bisque;
 }
 select,
-input {
+input,
+.btn {
   width: 100%;
   padding: 10px 20px;
-}
-input[type="file"] {
-  padding: 0;
 }
 input[type="radio"],
 input[type="checkbox"] {
@@ -360,13 +299,6 @@ textarea {
 legend {
   transform: translateY(-10px);
 }
-.form-group:not(:first-of-type) {
+.form-group {
   margin: 15px 0 5px;
-}
-.form-group-sm {
-  margin: 10px 0 5px;
-}
-.btn {
-  width: 100%;
-  padding: 10px 20px;
 }
